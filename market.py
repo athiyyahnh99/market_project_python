@@ -1,4 +1,5 @@
 #  Aplikasi Market
+# Nama : Athiyyah Nisrina Husna
 
 #Stock
 apple_stock = 7
