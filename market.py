@@ -2,14 +2,47 @@
 # Nama : Athiyyah Nisrina Husna
 
 #Stock
-apple_stock = 7
-orange_stock = 7
-grape_stock = 6
-
+stock = [10,10,10]
 #Price
-apple_price = 10_000
-orange_price = 15_000
-grape_price = 20_000
+price = [10_000, 15_000, 20_000]
+
+print("=== Selamat Datang di Pasar Buah ===")
+
+print("\nList Menu: ")
+print("1. Menampilkan daftar Buah")
+print("2. Menambah Buah")
+print("3. Menghapus Buah")
+print("4. Membeli Buah")
+print("5. Exit Program")
+
+
+fruit = [[10,"Apple",10_000],
+         [10,"Orange",15_000],
+         [10,"Grape",20_000]]
+
+while True :
+    choice = input("Masukkan angka menu yang dijalankan : ")
+    if choice == "1": #Menampilkan daftar buah
+        print("Daftar Buah")
+        i = 0
+        for i in range(len(fruit)):
+            print (f"{i:<6}{fruit[i+0][1]:<10}{fruit[i+0][2]:<12}{fruit[i+0][2]}")
+    elif choice == "2": #Menambah buah
+        add_fruit = input(print("Masukkan nama buah: "))
+        add_stock = int(input(print("Masukkan stock buah: ")))
+        add_price = int(input(print("Masukkan harga buah: ")))
+        
+        fruit.append([add_fruit,add_stock,add_price]) 
+        print(fruit)
+        #i = 0
+        #for i in range(len(fruit)):
+            #print (f"{i:<6}{fruit[i+0][1]:<10}{fruit[i+0][2]:<12}{fruit[i+0][2]}") 
+        
+        
+        
+        
+
+
 
 apple = int(input("Masukkan jumlah apel: "))
 
