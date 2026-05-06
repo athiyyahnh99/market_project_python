@@ -5,6 +5,11 @@ apple_stock = 7
 orange_stock = 7
 grape_stock = 6
 
+#Price
+apple_price = 10_000
+orange_price = 15_000
+grape_price = 20_000
+
 apple = int(input("Masukkan jumlah apel: "))
 
 while apple > apple_stock :
@@ -27,18 +32,13 @@ while grape > grape_stock :
     print(f"Stock anggur tinggal {grape_stock}")
     grape =int(input("Masukkan jumlah anggur: "))
 
-#Price
-apple_price = apple * 10_000
-orange_price = orange * 15_000
-grape_price = grape * 20_000
-
 total = apple_price + orange_price + grape_price
 
 print("\nDetail Belanja")
 
-print(f"\nApel : {apple} x 10000 = {apple_price}")
-print(f"Jeruk : {orange} x 15000 = {orange_price}")
-print(f"Apel : {grape} x 20000 = {grape_price}")
+print(f"\nApel : {apple} x 10000 = {apple * apple_price}")
+print(f"Jeruk : {orange} x 15000 = {orange * orange_price}")
+print(f"Apel : {grape} x 20000 = {grape * grape_price}")
 
 print(f"\nTotal : {total}")
 
