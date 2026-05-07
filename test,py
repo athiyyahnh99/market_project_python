@@ -1,0 +1,45 @@
+# === Aplikasi Market ===
+# Nama: Bayu Dwi Prasetya
+
+# Detail product
+# [stok, nama, harga]
+fruits_list = [
+    {"stock": 10, "product": "Apel", "price": 10_000},
+    {"stock": 10, "product": "Jeruk", "price": 15_000},
+    {"stock": 10, "product": "Anggur", "price": 20_000},
+]
+
+# Main Menu Program
+running = True
+while running:
+    print("\nSelamat Datang di Pasar Buah")
+    print("\nMenu Utama")
+    print("1. Menampilkan Daftar Buah")
+    print("2. Menambah Daftar Buah")
+    print("3. Membeli Buah")
+    print("4. Menghapus Daftar Buah")
+    print("5. Exit")
+    input_menu = input("Masukan angka menu yang ingin dijalankan:")
+
+    # Menu pertama
+    if input_menu == "1":
+        print("\nDaftar Buah")
+        print(f"{"Index":<7} | {"Buah":<10} | {"Stock":<5} | {"Harga":<16}")
+        for idx, product in enumerate(fruits_list):
+            print(f"{idx:<7} | {product[1]:<10} | {product[0]:<5} | {product[2]:<16,}")
+    elif input_menu == "2":
+        while True:
+            product_name = input("Masukan Nama Buah : ")
+            product_stock= int(input("Masukan Stok Buah : "))
+            product_price= int(input("Masukan Harga Buah: "))
+            fruits_list.append([product_stock, product_name, product_price])
+            
+            confirm_msg = input("Lanjut tambah buah (yes:jika lanjut)?: ")
+            if confirm_msg.lower() != "yes":
+                print("Tambah buah selesai")
+                print(f"{"Index":<7} | {"Buah":<10} | {"Stock":<5} | {"Harga":<16}")
+                for idx, product in enumerate(fruits_list):
+                    print(f"{idx:<7} | {product[1]:<10} | {product[0]:<5} | {product[2]:<16,}")
+                break
+    elif input_menu == "5":
+        break
